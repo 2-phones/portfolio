@@ -7,7 +7,8 @@
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
   --color-pink: #fe918d;
-  --color-dark-pink: #ff6863;
+  --color-light-puple: #a697d3;
+  --color-dark-pink: #ff63dd;
   --color-black: #4d4d4d;
   --color-dark-grey: #4e4e4e;
   --color-grey: #616161;
@@ -82,11 +83,18 @@ p {
   margin: 4px 0;
 }
 
+button {
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
 /* Navbar */
 #navbar {
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-pink);
+  background-color: var(--color-light-puple);
   align-items: center;
   color: var(--color-white);
   padding: 16px;
@@ -109,10 +117,36 @@ p {
 
 .navbar__menu__item.active {
   border: 1px solid var(--color-white);
-  
 }
 
 .navbar__menu__item:hover {
-    background-color: var(--color-dark-pink);
-    
+  background-color: var(--color-dark-pink);
+}
+
+/* Home */
+#home {
+  background: url(/imgs/홈배경.png) center/cover no-repeat;
+  padding: 40px;
+  text-align: center;
+}
+
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid var(--color-light-white)
+}
+
+.home__titile,.home__description {
+  color: var(--color-white);
+}
+
+.home__contacat {
+  color: var(--color-white);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  padding: 8px 12px;
+  margin: 24px;
+  border: 2px solid var(--color-light-white);
+  border-radius: 4px;
 }
