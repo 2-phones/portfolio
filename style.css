@@ -134,10 +134,11 @@ button {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  border: 2px solid var(--color-light-white)
+  border: 2px solid var(--color-light-white);
 }
 
-.home__titile,.home__description {
+.home__titile,
+.home__description {
   color: var(--color-white);
 }
 
