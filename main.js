@@ -22,7 +22,36 @@ navbarMenu.addEventListener('click', (event) => {
     if (link == null){
         return;
     }
-    console.log(event.target.dataset.link);
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({ behavior: 'smooth' });
+    scrollIntoView(link);
 });
+
+// Handle click on "contact me" button on home
+const homecontactbtn = document.querySelector('.home__contact');
+homecontactbtn.addEventListener('click', () => {
+    scrollIntoView('#contact');
+});
+
+// scroll down home screen transparent
+// homeHeight 은 왜 800인가?
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', ()=> {
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+
+
+
+
+
+
+
+
+
+
+
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector('selector');
+    scrollTo.scrollIntoView({ behavior: 'smooth'});
+}
+
