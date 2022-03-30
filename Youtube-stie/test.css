@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&family=Comforter+Brush&family=Dongle&family=Hind+Siliguri&family=Itim&family=Mali:wght@500&family=Permanent+Marker&family=Single+Day&display=swap");
+
+:root {
+  --text-color: oldlace;
+  --background-color: #4e342e;
+  --accent-color: springgreen;
+}
+body {
+  margin: 0%;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* ↑ alingn-itmes : center  내용들 모두 중간으로 맞출때 쓴다
+  로고 , 메뉴, 아이콘 같은라인에 중간. */
+  background-color: var(--background-color);
+  padding: 8px 12px;
+}
+/* logo */
+.navbar__logo {
+  font-size: 24px;
+}
+.navbar__logo i {
+  color: var(--accent-color);
+}
+
+/* Menu */
+.navbar__menu {
+  display: flex;
+  padding-left: 0px;
+  list-style: none;
+}
+
+.navbar__menu li {
+  padding: 8px 12px;
+}
+
+.navbar__menu li:hover {
+  background-color: peru;
+  border-radius: 4px;
+}
+/* icon */
+.navbar__icons {
+  display: flex;
+  color: var(--text-color);
+  list-style: none;
+}
+
+.navbar__toggleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: springgreen;
+}
+
+.navbar__icons li {
+  padding: 8px 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar__menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar__icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+    padding: 0px;
+  }
+  .navbar__toggleBtn {
+    display: block;
+  }
+  .navbar__menu.active,
+  .navbar__icons.active {
+    display: flex;
+  }
+}

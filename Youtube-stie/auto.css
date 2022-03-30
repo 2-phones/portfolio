@@ -1,0 +1,14 @@
+:root {
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+}
+section .player {
+  display: flex;
+}
