@@ -150,7 +150,7 @@ button {
 #home {
   background: url("imgs/홈배경.png") center/cover no-repeat;
   padding: 40px;
-  padding: 120px;
+  padding-top: 120px;
   text-align: center;
 }
 
@@ -164,6 +164,11 @@ button {
 .home__titile,
 .home__description {
   color: var(--color-white);
+  
+}
+
+.home__description {
+  font-size: var(--font-regular);
 }
 
 .home__contact {
