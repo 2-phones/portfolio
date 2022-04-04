@@ -228,9 +228,15 @@ button {
   font-size: var(--font-small);
 }
 
-.education {
+.education__description {
   display: flex;
   align-items: center;
+  padding-top: 100px;
+}
+
+.education__logo{
+  width: 150px;
+  
 }
 
 .education__name {
